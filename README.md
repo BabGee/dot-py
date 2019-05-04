@@ -1,4 +1,4 @@
-# dot-py
+# hobby-projects
 Hobby projects
 Pizzeria Management System as tk.py
 phone calculator as calculator.py
