@@ -18,7 +18,7 @@ tf.pack(side=TOP)
 lf = Frame(root,width="900",height="650",border=8,relief=RAISED)
 lf.pack(side=LEFT)
 
-rf = Frame(root,width="440",height="650",border=8,relief=RAISED)
+rf = Frame(root,width="450",height="650",border=8,relief=RAISED)
 rf.pack(side=RIGHT)
 
 tlf = Frame(lf,width="900",height="330",border=8,relief=RAISED)
@@ -27,10 +27,10 @@ tlf.pack(side=TOP)
 blf = Frame(lf,width="900",height="320",border=6,relief=RAISED)
 blf.pack(side=BOTTOM)
 
-trf = Frame(rf,width="440",height="450",border=12,relief=RAISED)
+trf = Frame(rf,width="450",height="450",border=12,relief=RAISED)
 trf.pack(side=TOP)
 
-brf = Frame(rf,width="440",height="200",border=16,relief=RAISED)
+brf = Frame(rf,width="450",height="200",border=16,relief=RAISED)
 brf.pack(side=BOTTOM)
 
 ltlf = Frame(tlf,width="400",height="330",border=16,relief=RAISED)
