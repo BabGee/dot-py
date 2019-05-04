@@ -1,0 +1,27 @@
+{% extends 'foodcart/base.html' %}
+{% load static %}
+
+{% block title %} Menu {% endblock %}
+
+{% block content %}
+	{{message}}
+<!-- Three columns of text below the carousel -->
+    <div class="row">
+	 {% for object in object_list %}
+      <div class="col-lg-4">
+        <img src="{% static 'foodcart/images/salad.jpg' %}" height="100" width="200">
+        <p>{{object.name}}</p>
+		<p>{{ object.price }}</p>
+		{{% if object in user.profile.food_orders.all() %}}
+		Already Ordered
+		{% elif object in current_order_products %}
+		<p><a class="btn btn-lg btn-primary" href="{% url 'shopping_cart:order_summary' %}" role="button">Go to Cart</a></p>
+		{% else %}
+        <p><a class="btn btn-lg btn-primary" href="{% url 'shopping_cart:add_to_cart' object.id %}" role="button">Add to cart</a></p>
+		{% endif %}
+	 </div><!-- /.col-sm-3 -->
+	 {% endfor %}
+	  
+	</div><!-- /.container -->
+
+{% endblock %}

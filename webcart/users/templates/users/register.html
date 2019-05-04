@@ -1,0 +1,26 @@
+{% extends "foodcart/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+  <div class ="col-sm-6 col-sm-offset-3">
+	<div class="content-section">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Join Today</legend>
+				{{form|crispy}}
+			</fieldset>	
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">CREATE FOODCART ACCOUNT</button>
+			</div>
+		</form>
+	</div>
+	
+	<div class="border-bottom pt-3">
+		<small class="text-muted">Already Have an account? <a href="{% url 'login' %}">Login</a></small>
+	</div>
+  </div>
+</div>
+{% endblock content %}	
