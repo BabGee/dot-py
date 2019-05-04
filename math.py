@@ -5,7 +5,7 @@ from math import sqrt
 
 root = Tk()
 root.title("Mean")
-root.geometry("1000x600+0+0")
+root.geometry("1000x700+0+0")
 root.config(bg="black")
 
 #***************************************VARIABLES************************************
