@@ -3,6 +3,16 @@
 
 {% block title %} Menu {% endblock %}
 
+{% block jumbotron %}
+
+	<div class="jumbotron">
+		<h1 class="whiteFont">KILIFI FOOD JOINTS</h1>
+		<p class="whiteFont">Experience the wide variety of Food Offered by these Exotic Hotels in Kilifi</p>
+	</div>
+
+{% endblock %}
+
+
 {% block content %}
 	{{message}}
 <!-- Three columns of text below the carousel -->
@@ -12,7 +22,7 @@
         <img src="{% static 'foodcart/images/salad.jpg' %}" height="100" width="200">
         <p>{{object.name}}</p>
 		<p>{{ object.price }}</p>
-		{{% if object in user.profile.food_orders.all() %}}
+		{% if object in user.profile.food_orders.all %}
 		Already Ordered
 		{% elif object in current_order_products %}
 		<p><a class="btn btn-lg btn-primary" href="{% url 'shopping_cart:order_summary' %}" role="button">Go to Cart</a></p>
