@@ -1,6 +1,8 @@
 from . import views
 from django.urls import path
 
+app_name = "shopping_cart"
+
 urlpatterns = [
 	path("add-to-cart/(<item_id>[-\w]+)", views.add_to_cart, name="add_to_cart"),
 	path("order-summary", views.order_details, name="order_summary"),
