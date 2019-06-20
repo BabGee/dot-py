@@ -18,13 +18,3 @@ Hobby projects
     using manage.py runserver using command "python manage.py runserver"
     copy paste the given url to you browser
   
-  #tk.py
-    Pizza management system
-    Built using Python Tkinter
-    
-  #calculator.py 
-    Built using Python Tkinter
-    
-  #math.py
-    statistics calculator used to calculate common statistics eg mean, mode, median, standard deviation and variance
-    Built using Python Tkinter
