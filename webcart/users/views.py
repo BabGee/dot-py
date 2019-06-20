@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect #17- return redirect("foodcart-home") 
+from django.shortcuts import render, redirect  
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -16,7 +16,6 @@ def register(request):
 			username = form.cleaned_data.get("username")
 			messages.success(request, f"Your account has been created. You can now login")
 			return redirect("login")
-			#return HttpResponseRedirect(reverse("foodcart-home"))
 	else:	
 		form = UserRegisterForm()
 		

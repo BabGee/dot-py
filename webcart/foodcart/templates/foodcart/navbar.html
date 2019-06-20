@@ -8,9 +8,15 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'foodcart-home' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'foodcart-about' %}">About</a>
-        </li>
+        <div class="nav-link">
+				<li class="dropdown">
+				  <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true">Our Company<span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="{% url 'foodcart-about' %}">About Us</a></li>
+					<li><a href="{% url 'foodcart-team' %}">Our Team</a></li>
+				  </ul>
+				</li>
+			</div>
         <li class="nav-item">
           <a class="nav-link " href="{% url 'foodcart-gallery' %}">Our Gallery</a>
         </li>
@@ -22,10 +28,10 @@
 				  {% if not user.is_authenticated %}
 					<li><a href="{% url 'login' %}">Login</a></li>
 					<li><a href="{% url 'register' %}">Register</a></li>
-				  {% else %}	
+				  {% else %}
 					<li><a href="{% url 'profile' %}">Profile</a></li>
 					<li><a href="{% url 'logout' %}">Logout</a></li>
-				  {% endif %}	
+				  {% endif %}
 				  </ul>
 				</li>
 			</div>
@@ -37,6 +43,6 @@
       </form>
     </div>
   </nav>
-  
-  
- <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> --> 
+
+
+ <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> -->

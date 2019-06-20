@@ -6,7 +6,7 @@ from shopping_cart.models import OrderItem, Order
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from shopping_cart.extras import generate_order_id
-#from carts.helpers import get_reference_code
+# from carts.helpers import get_reference_code
 from django.urls import reverse
 
 
@@ -23,7 +23,7 @@ def add_to_cart(request, **kwargs):
 	product = Order.objects.filter(owner=user_profile, is_ordered=False)
 	if product in request.user.profile.food_orders.all():
 		messages.info(request, "In Cart")
-		return redirect(reverse("foodcart/menu.html")) #MENU.HTML NAME
+		return redirect(reverse("view_menu")) #MENU.HTML NAME
 		
 	order_item, status = OrderItem.objects.get_or_create(product=product)
 	order_order, status = Order.objects.get_or_create(owner=user_profile, is_ordered=True)
@@ -34,7 +34,7 @@ def add_to_cart(request, **kwargs):
 		user_order.save()
 		
 	messages.info(request, "Item added to Cart")
-	return redirect(reverse("foodcart/menu.html"))#MENU.HTML NAME
+	return redirect(reverse("view_menu"))#MENU.HTML NAME
 
 @login_required
 def delete_from_cart(request, item_id):

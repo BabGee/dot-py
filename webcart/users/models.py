@@ -7,7 +7,7 @@ from products.models import Product
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	image = models.ImageField(default="default.jpg", upload_to="profile_pics")
-	food_ordered = models.ManyToManyField(Product, blank=True)
+	food_orders = models.ManyToManyField(Product, blank=True)
 	
 	def __str__(self):
 		return f"{self.user.username}Profile"

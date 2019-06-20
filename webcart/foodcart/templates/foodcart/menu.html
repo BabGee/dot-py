@@ -3,6 +3,7 @@
 
 {% block title %} Menu {% endblock %}
 
+
 {% block jumbotron %}
 
 	<div class="jumbotron">
@@ -12,15 +13,14 @@
 
 {% endblock %}
 
-
 {% block content %}
-	{{message}}
+
 <!-- Three columns of text below the carousel -->
     <div class="row">
 	 {% for object in object_list %}
       <div class="col-lg-4">
-        <img src="{% static 'foodcart/images/salad.jpg' %}" height="100" width="200">
-        <p>{{object.name}}</p>
+        <img class="bd-placeholder-img rounded-circle" src="{% static 'foodcart/images/salad.jpg' %}" height="100" width="200">
+        <p>{{object.title}}</p>
 		<p>{{ object.price }}</p>
 		{% if object in user.profile.food_orders.all %}
 		Already Ordered
@@ -31,7 +31,7 @@
 		{% endif %}
 	 </div><!-- /.col-sm-3 -->
 	 {% endfor %}
-	  
+
 	</div><!-- /.container -->
 
 {% endblock %}

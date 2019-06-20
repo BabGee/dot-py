@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from products.models import Product
 
-# Create your models here.
+
 class CartManager(models.Manager):
 	def new_or_get(self, request):
 		cart_id = request.session.get("cart_id", None)
