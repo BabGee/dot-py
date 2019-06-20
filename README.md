@@ -10,11 +10,12 @@ Hobby projects
     
     How To Run webcart(windows)
     Create a folder and cd into it
-    download and create a virtualenv inside the folder
+    download and create a virtualenv using pip inside the folder(pip install virtualenv && virtualenv <name>)
     cd into virtualenv (to activate virtualenv use command ".\scripts\activate")
-    install django inside the virtualenv
-    paste webcart folder
-    (various libraries to be installed like Pillow)
-    using manage.py runserver using command "python manage.py runserver"
-    copy paste the given url to you browser
+    install django inside the virtualenv(pip install django)
+    clone webcart folder
+    install libraries using pip(pip install Pillow, pip install django-crispy_forms)
+    runserver using command "python manage.py runserver"
+    copy paste the given url to you browser and run website
+    
   
